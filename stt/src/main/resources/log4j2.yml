@@ -1,0 +1,35 @@
+Configuration:
+  properties:
+    property:
+    - name: logPath
+      value: logs
+    - name: logName
+      value: flux
+    - name: rootLevel
+      value: debug
+    - name: useConsole
+      value: allow
+  Appenders:
+    Console:
+      name: Console
+      target: SYSTEM_OUT
+      ThresholdFilter:
+        level: ${sys:rootLevel}
+        onMatch: ${sys:useConsole}
+      PatternLayout:
+        pattern: "%d{yyyy.MM.dd G HH:mm:ss,SSS z} %-5p [%t] %C{2} (%F:%L) - %m%n"
+    RollingRandomAccessFile:
+      name: File
+      fileName: "${sys:logPath}/${sys:logName}.log"
+      filePattern: "${sys:logPath}/${sys:logName}.%d{yyyy-MM-dd}.log"
+      PatternLayout:
+        pattern: "%d{yyyy.MM.dd G HH:mm:ss,SSS z} %-5p [%t] %C{2} (%F:%L) - %m%n"
+      Policies:
+        TimeBasedTriggeringPolicy:
+          interval: 1
+  Loggers:
+    Root:
+      level: ${sys:rootLevel}
+      AppenderRef:
+        - ref: File
+        - ref: Console
