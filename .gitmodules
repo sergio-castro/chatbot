@@ -1,0 +1,3 @@
+[submodule "commons-text"]
+	path = commons-text
+	url = http://git-wip-us.apache.org/repos/asf/commons-text.git
