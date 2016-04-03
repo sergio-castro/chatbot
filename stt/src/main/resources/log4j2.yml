@@ -2,9 +2,9 @@ Configuration:
   properties:
     property:
     - name: logPath
-      value: logs
+      value: log
     - name: logName
-      value: flux
+      value: chatbog
     - name: rootLevel
       value: debug
     - name: useConsole
