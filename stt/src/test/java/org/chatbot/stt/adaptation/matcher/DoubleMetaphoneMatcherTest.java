@@ -15,8 +15,6 @@ public class DoubleMetaphoneMatcherTest {
         String s2 = "Katherin Zmith";
         DoubleMetaphoneMatcher matcher = new DoubleMetaphoneMatcher();
         assertThat(matcher.matches(s1, s2)).isTrue();
-        System.out.println(matcher.encode(s1));
-        System.out.println(matcher.encode(s2));
     }
 
     @Test
@@ -25,8 +23,6 @@ public class DoubleMetaphoneMatcherTest {
         String s2 = "Katherin Zmith";
         DoubleMetaphoneMatcher matcher = new DoubleMetaphoneMatcher();
         assertThat(matcher.matches(s1, s2)).isTrue();
-        System.out.println(matcher.encode(s1));
-        System.out.println(matcher.encode(s2));
     }
 
     @Test
@@ -35,8 +31,6 @@ public class DoubleMetaphoneMatcherTest {
         String s2 = "Catherine Summit";
         DoubleMetaphoneMatcher matcher = new DoubleMetaphoneMatcher();
         assertThat(matcher.matches(s1, s2)).isFalse();
-        System.out.println(matcher.encode(s1));
-        System.out.println(matcher.encode(s2));
     }
 
 }
