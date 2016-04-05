@@ -5,6 +5,6 @@ import java.util.Optional;
 
 public interface Bot {
 
-    Optional<Sentence> reply(Sentence sentence);
+    Optional<Identifiable> reply(Identifiable sentence);
 
 }

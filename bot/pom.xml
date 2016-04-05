@@ -12,4 +12,12 @@
 
     <artifactId>bot</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>chatbot</groupId>
+            <artifactId>stt</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 </project>
